@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "My Thoughts";
 ---
 
 <html lang="en">
@@ -8,14 +8,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
-    <a href="/">About</a>
-    <a href="/thoughts/">Thoughts</a>
-    <a href="/projects/">Projects</a>
-    <a href="/learning/">Learning</a>
+    
 	<body>
-		<h1>Thoughts</h1>
+        <a href="/">About</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/projects/">Projects</a>
+        <a href="/learning/">Learning</a>
+		<h1>{pageTitle}</h1>
 		<h2>This is where I will put writings and thoughts</h2>
+        <ul>
+            <li><a href="/posts/post-1/">Post 1</a></li>
+            <li><a href="/posts/post-2/">Post 2</a></li>
+          </ul>
 	</body>
 </html>
