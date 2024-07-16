@@ -1,0 +1,25 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const currentPath = window.location.pathname; // Get current path
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        if (linkPath === currentPath) {
+            link.classList.add("current-page-link");
+        }
+    });
+});
+</script>
+<div class="nav-line">
+    <a class={currentPath === "thoughts" ? "active" : 'nav-link'} href="/thoughts">Thoughts</a>
+    <a class={currentPath === "projects" ? "active" : 'nav-link'} href="/projects">Projects</a>
+    <a class={currentPath === "learning" ? "active" : 'nav-link'} href="/learning">Learning</a>
+    <a class={currentPath === "" ? "active" : 'nav-link'} href="/">About</a>
+</div>

@@ -1,5 +1,8 @@
 ---
-const pageTitle = "My Thoughts";
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+const pageTitle = "Thoughts";
 ---
 
 <html lang="en">
@@ -10,17 +13,13 @@ const pageTitle = "My Thoughts";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-    
-	<body>
-        <a href="/">About</a>
-        <a href="/thoughts/">Thoughts</a>
-        <a href="/projects/">Projects</a>
-        <a href="/learning/">Learning</a>
+	<body class="content">
 		<h1>{pageTitle}</h1>
-		<h2>This is where I will put writings and thoughts</h2>
+        <Navigation />
         <ul>
             <li><a href="/posts/post-1/">Post 1</a></li>
             <li><a href="/posts/post-2/">Post 2</a></li>
           </ul>
 	</body>
+    <Footer />
 </html>

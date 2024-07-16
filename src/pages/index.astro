@@ -1,14 +1,8 @@
 ---
-const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Anthony",
-  country: "United States",
-  occupation: "Student",
-  hobbies: ["climbing", "reading", "lifting"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+const pageTitle = "About";
 ---
 
 <html lang="en">
@@ -19,25 +13,20 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<a href="/">About</a>
-    <a href="/thoughts/">Thoughts</a>
-	<a href="/projects/">Projects</a>
-    <a href="/learning/">Learning</a>
-	<body>
+	<body class="content">
 		<h1>{pageTitle}</h1>
-		<h2>My Astro Site!</h2>
+		<Navigation />
 
-		<p>Here are a few facts about me:</p>
-		<ul>
-  		<li>My name is {identity.firstName}.</li>
-  		<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-  		{identity.hobbies.length >= 2 &&
- 		   <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  }
-		</ul>
-		<p>My skills are:</p>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
+		<p>
+			Hi! I am a student and developer, currently studying Computer Science at the <a target="_blank" rel="noreferrer" href="https://virginia.edu">University of Virginia</a>. My field of interests is quite extensive, ranging from machine learning to quantum computing, and even human behavior and psychology.
+		</p>
+		<p>
+			I've always enjoyed reading and learning about various subjects, so much so that I've dedicated an entire page to talk about what I have and currently am <a href="/learning">learning</a>. 
+			For the past two summers, I've worked with <a target="_blank" rel="noreferrer" href="https://www.verizon.com/about">Verizon</a> as a Network Engineering Intern, where I've had the opportunity to work on various software engineering projects and learn about the telecommunications industry.
+		</p>
+		<p>
+			For more information about me and my and interests, feel free to explore my <a href="/thoughts">written works</a>, <a href="/projects">projects</a>, and other social channels.</p>
+		</p>
 	</body>
+	<Footer />
 </html>

@@ -1,5 +1,8 @@
 ---
-const pageTitle = "My Projects";
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+const pageTitle = "Projects";
 ---
 
 <html lang="en">
@@ -10,12 +13,23 @@ const pageTitle = "My Projects";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-    <a href="/">About</a>
-    <a href="/thoughts/">Thoughts</a>
-    <a href="/projects/">Projects</a>
-    <a href="/learning/">Learning</a>
-	<body>
+	<body class="content">
 		<h1>{pageTitle}</h1>
-		<h2>This is where I display the projects I am working on</h2>
+        <Navigation />
+        <p>
+            Here are some of the projects I've worked on:
+        </p>
+		<div class="container">
+            <div class="item">
+                <a target="_blank" rel="noreferrer" href="https://github.com/wang-anthony03/SMART-Scheduler" class="link">SmartScheduler</a>
+                <span class="description">DRL-based MAC scheduler for massive MIMO</span>
+            </div>
+            <div class="item">
+                <a target="_blank" rel="noreferrer" href="https://github.com/wang-anthony03/TravelTinder" class="link">Triplet</a>
+                <span class="description">A group travel planning tool</span>
+            </div>
+            <br>
+            <br>
 	</body>
+    <Footer />
 </html>
