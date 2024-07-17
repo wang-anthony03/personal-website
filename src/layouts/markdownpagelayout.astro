@@ -1,7 +1,20 @@
 ---
+import '../styles/global.css';
 const { frontmatter } = Astro.props;
 ---
-<h1>{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
-<p>Published on: {frontmatter.pubDate}</p>
-<slot />
+<html lang="en">
+  <body class="post-content">
+    <div>
+        <h2>{frontmatter.title}</h2>
+        <div style='display: flex; justify-content: space-between;'>
+            <p class="description">{frontmatter.author}, {frontmatter.pubDate.toString().slice(0,10)}</p>
+            <a style='display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: right;' class='nav-link' href="/">Back</a>
+        </div>
+        <slot />
+    </div>
+  </body>
+</html>

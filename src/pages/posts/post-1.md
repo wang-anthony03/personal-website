@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/markdownpagelayout.astro'
 title: 'My First Blog Post'
-pubDate: '2022-07-01'
+pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 image:
@@ -23,3 +23,6 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 ## What's next
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+
+>Hello
+>How are you
