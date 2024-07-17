@@ -1,9 +1,9 @@
 ---
 layout: '../../layouts/markdownpagelayout.astro'
-title: 'My First Blog Post'
+title: 'Progression'
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+description: 'Progression during climbing and the progression wall.'
+author: 'Anthony Wang'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
@@ -25,4 +25,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
 
 >Hello
->How are you
+>How are youa
